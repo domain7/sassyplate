@@ -5,6 +5,10 @@ For documentation and more information on SASS and Compass, refer to the officia
 * SASS: [http://sass-lang.com](http://sass-lang.com)
 * Compass: [http://compass-style.org](http://compass-style.org)
 
+## Location of directory to watch
+
+The watched directory should be the theme directory, with your stylesheet directory being a child of that.
+
 ## screen.scss
 
 This file is your main compiled stylesheet, and screen.css should be included by your document.
