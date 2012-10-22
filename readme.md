@@ -2,8 +2,8 @@
 
 For documentation and more information on SASS and Compass, refer to the official documentation:
 
-* SASS: http://sass-lang.com
-* Compass: http://compass-style.org
+* SASS: [http://sass-lang.com](http://sass-lang.com)
+* Compass: [http://compass-style.org](http://compass-style.org)
 
 ## screen.scss
 
