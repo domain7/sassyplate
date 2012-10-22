@@ -1,0 +1,15 @@
+/* 
+	IE Stylesheet
+	
+	A separate IE stylesheet is reduced in importance by SASS allowing nested selectors
+	like the following:
+	
+		.lt-ie8 & {
+			
+		}
+		
+	More extensive IE compatibility styling can go in here.
+	
+	Include any files already included in screen.scss if such is neccesary.
+	
+*/

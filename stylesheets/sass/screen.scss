@@ -1,0 +1,96 @@
+/*
+	SASS & COMPASS BOILERPLATE
+	For documentation and more information on SASS and Compass, refer to the official documentation:
+		+ SASS: http://sass-lang.com
+		+ Compass: http://compass-style.org
+
+	This file acts as an asset manager and loads the following:
+		+ Compass files
+		+ Libraries
+		+ Variables (fonts, colours, etc)
+		+ Mixins (reusable styles)
+		+ Modules (larger, self-contained, reusable units)
+		+ Partials (parts of styling broken off for maintainability)
+		+ A top-down stylesheet
+
+	Note that files are included in order of necessity. For example, Compass CSS stuff can be used in
+	variables which can be used in mixins, modules, site styles, etc.
+
+	What about media queries?
+	Note that since SASS allows you to nest @media declarations, separate stylesheets containing
+	media queries are unnecessary. Nesting @media declarations also reinforces a modular approach.
+
+*/
+
+
+
+/*	Imported modules from Compass  */
+
+// Config variables for Compass
+@import "compass-config";
+
+// The global reset, based on Eric Meyer's reset
+@import "compass/reset";
+
+// If you prefer Normalize, comment out the @import "compass/reset"; and uncomment the following
+//@import "includes/normalize";
+
+// SASS mixins for CSS3 properties.
+// For documentation, visit: http://compass-style.org/reference/compass/css3/
+@import "compass/css3";
+
+
+
+/*
+	Libraries, variables, and mixins 
+
+	An example of a SASS library is http://github.com/nathanshubert/Unicode-Shapes-Preprocessor-Library.
+	They should be prefixed with an underscore, stored in the includes directory,
+	and are included like such:
+	@import "includes/library-name";
+	
+*/
+	
+@import "variables";
+@import "mixins";
+
+
+
+/* 
+	Modules 
+	Self contained pieces of styling that can be reused.
+	Modules should have the following characteristics: 
+		+ Be context independent so they can be used anywhere.
+		+ Defined within a mixin so that they can be used easily, anywhere.
+		+ Be applied to a class that describes what the element IS, not what it looks like.
+		+ Contain their own variations, fallbacks, and possibly media queries
+	
+	Buttons are a good example of a module.
+
+	Module files should be prefixed with an underscore, stored in the modules directory, 
+	and included like such:
+	@import "modules/module-name";
+
+*/
+
+
+
+/* 
+	Partials 
+	Pieces of code that aren't modular in nature, but are broken off for easier maintainability.
+	
+	Partials should be prefixed with an underscore, stored in the partials directory,
+	and included as such:
+	@import "partials/partial-name";
+	
+*/
+
+
+
+/*
+	Site styles 
+	A traditional-style top-down stylesheet.
+
+*/
+
+@import "style";

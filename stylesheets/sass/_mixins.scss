@@ -1,0 +1,11 @@
+/* Mixins
+/* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
+
+
+@mixin hover_focus_underline {
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	} // hover, focus
+} // @mixin hover_focus_underline
