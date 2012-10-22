@@ -8,6 +8,9 @@
 		  with colour declarations in css.
 	
 	For example, the following are good variable names:
-	$base_font, $header_font, $brand_color, 
+	$base_font, $header_font, $brand_color, $accent_color, $breakpoint-midsize, $breakpoint-small
+	
+	These are bad variable names:
+	$blue, $orange, $helvetica, $ipad, $iphone
 	
 */
