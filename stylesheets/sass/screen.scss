@@ -24,7 +24,9 @@
 
 
 
-/*	Imported modules from Compass  */
+/*
+	Imported modules from Compass
+*/
 
 // Config variables for Compass
 @import "compass-config";
@@ -48,6 +50,8 @@
 	They should be prefixed with an underscore, stored in the includes directory,
 	and are included like such:
 	@import "includes/library-name";
+	
+	Variables and mixins are also included here.
 	
 */
 	
