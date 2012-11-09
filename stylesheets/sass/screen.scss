@@ -44,7 +44,7 @@
 
 
 /*
-	Libraries, variables, and mixins 
+	Libraries, variables, sprites, and mixins 
 
 	An example of a SASS library is http://github.com/nathanshubert/Unicode-Shapes-Preprocessor-Library.
 	They should be prefixed with an underscore, stored in the includes directory,
@@ -54,7 +54,8 @@
 	Variables and mixins are also included here.
 	
 */
-	
+
+@import "sprites";
 @import "variables";
 @import "mixins";
 
