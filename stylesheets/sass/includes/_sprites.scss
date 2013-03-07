@@ -1,3 +1,8 @@
+/*
+  For further instructions on use, see readme.md or screen.scss
+  
+*/
+
 // https://gist.github.com/2878758
 
 $sprites: sprite-map("common/*.png", $layout: smart);
@@ -21,3 +26,12 @@ $sprites-retina: sprite-map("double/*.png", $layout: smart);
     background-image: sprite-url($sprites-retina);
   }
 }
+
+
+/* Compatibility sprites. Uncomment to use.
+
+  $compatibility-layout: smart;
+  @import "compatibility/*.png";
+  @include all-compatibility-sprites;
+
+*/

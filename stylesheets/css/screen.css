@@ -132,6 +132,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* Mixins
 /* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
 /* 
+	Sprites 
+  To use compass's sprite generating awesomeness, uncomment the include following this 
+  comment block. 
+
+  _sprites.scss contains two items:
+    - A sprite-background mixin for sprites with a high pixel density counterpart
+    - A template to use vanilla compass sprites for compatibility
+  
+  To use the sprite-background mixin, you'll need two images of the same name, one in the
+  images/comman and one in the images/double directories. The mixin will automatically
+  use the right one.
+  
+  The template for vanilla compass sprites for compatibility is intended to be used for 
+  older broser support. Think rounded corners and such things.
+  
+*/
+/* 
 	Modules 
 	Self contained pieces of styling that can be reused.
 	Modules should have the following characteristics: 
@@ -158,6 +175,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 */
 /*
 	Site styles 
-	A traditional-style top-down stylesheet.
+	A traditional-style top-down stylesheet. Note that this file isn't always neccesary per se.
+	Rather than putting everything in _style.scss, think about how your stylesheet can be broken
+	up into partials and modules.
 
 */

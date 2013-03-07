@@ -38,7 +38,40 @@ and are included like such:
 	
 	@import "includes/library-name";
 
+## Images and sprites
+
+Our boilerplate's images directory has the following structure:
+
+    images/
+          /common
+          /compatibility
+          /double
+
+All of our sites really should be supporting high pixel density displays (eg, retina). Fortunately Compass's
+spriting ability makes this really easy for us. We can also use spriting to help with compatibility images 
+such as alpha screens.
+
+Note that all sprite images need to be saved as png's.
+
+Included in the template is includes/_sprites.scss. _sprites.scss contains two items:
+
+  - A sprite-background mixin for sprites with a high pixel density counterpart
+  - A template to use vanilla compass sprites for compatibility
+
+
+To use the sprite-background mixin, you'll need two images of the same name, one in the
+images/comman and one in the images/double directories. The mixin will automatically
+use the right one.
+
+    @include sprite-background(logo);
+
+The template for vanilla compass sprites for compatibility is intended to be used for 
+older broser support. Think rounded corners and such things. Compatibility sprite images
+should be saved in images/compatibility
+
+
 ## Modules 
+
 Self contained pieces of styling that can be reused.
 Modules should have the following characteristics:
 
