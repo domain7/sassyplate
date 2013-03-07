@@ -22,7 +22,7 @@
 	} // hover, focus
 } // @mixin hover_focus_underline
 
-@mixin nolist {
+@mixin no_list {
   // This one is particularly useful in Drupal where list often use list-style-image
   list-style-image: none;
   list-style-position: outside;
@@ -43,9 +43,23 @@
   font-size: $size/10+rem;
 } // @mixin font_size
 
-@mixin inline-block {
+@mixin inline_block {
   display: inline-block;
   zoom: 1;
   *display: inline;
 } // @mixin inline-block
 
+@mixin font_weight($weight) {
+  @if $weight == normal {
+    font-weight: normal;
+    font-weight: $font_weight-normal;
+  }
+  @if $weight == bold {
+    font-weight: bold;
+    font-weight: $font_weight-bold;
+  }
+  @if $weight == light {
+    font-weight: lighter;
+    font-weight: $font_weight-light;
+  }
+} // @mixin font_weight

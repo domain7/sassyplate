@@ -25,3 +25,19 @@
 	$breakpoint-x
 	
 */
+
+
+/* The following variables are needed by some of our mixins and can be adjust to meet
+   the needs of the site.
+*/
+
+// Fonts
+$font_default_stack-serif: "Times New Roman", Times, serif;
+$font_default_stack-sans_serif: "Helvetica Neue", Arial, sans-serif;
+
+// Font weights
+$font_weight-light: 100;
+$font_weight-medium: 400;
+$font_weight-normal: $font_weight-medium; // Basically an alias, for convenience
+$font_weight-bold: 700;
+$font_weight-black: 900;
