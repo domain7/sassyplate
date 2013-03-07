@@ -44,6 +44,17 @@
 
 
 /*
+  Fonts
+  
+  Any @font-face or third party font imports should go in this file
+
+*/
+
+@import "fonts";
+
+
+
+/*
 	Libraries, variables, sprites, and mixins 
 
 	An example of a SASS library is http://github.com/nathanshubert/Unicode-Shapes-Preprocessor-Library.
@@ -96,7 +107,12 @@
 	and included like such:
 	@import "modules/module-name";
 
+  Some default modules are provided bellow. Uncomment them to use them.
+
 */
+
+// @import "modules/default-styles";
+// @import "modules/drupal-reset"; // This resets a lot of default Drupal css
 
 
 

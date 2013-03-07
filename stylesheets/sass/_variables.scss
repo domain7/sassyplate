@@ -42,3 +42,10 @@ $font_weight-medium: 400;
 $font_weight-normal: $font_weight-medium; // Basically an alias, for convenience
 $font_weight-bold: 700;
 $font_weight-black: 900;
+
+// Font sizes
+$font_size-body: 14;
+
+// Colours
+// These are just defaults. You're going to want to go ahead and change them.
+$color-brand: #00A4E4;
