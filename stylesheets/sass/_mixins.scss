@@ -1,6 +1,18 @@
 /* Mixins
 /* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
 
+// -- Mixins for common patterns, utility and compatability -- //
+
+@mixin clearfix {
+  zoom: 1;  // Triggering "hasLayout" in IE
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  } // after
+} // @mixin clearfix
 
 @mixin hover_focus_underline {
 	text-decoration: none;
@@ -9,3 +21,31 @@
 		text-decoration: underline;
 	} // hover, focus
 } // @mixin hover_focus_underline
+
+@mixin nolist {
+  // This one is particularly useful in Drupal where list often use list-style-image
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  list-style: none;
+} // @mixin nolist
+
+@mixin responsive_image {
+  max-width: 100%;
+  height: auto;
+  .ie8 & {
+    width: auto;
+  } // ie8
+} // @mixin responsive_image
+
+@mixin font_size($size) {
+  font-size: $size+px;
+  font-size: $size/10+rem;
+} // @mixin font_size
+
+@mixin inline-block {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+} // @mixin inline-block
+
