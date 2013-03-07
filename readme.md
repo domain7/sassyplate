@@ -60,11 +60,18 @@ A traditional-style top-down stylesheet.
 
 ## ie.scss
 
-A separate IE stylesheet is reduced in importance by SASS allowing nested selectors
-like the following:
+We no longer include a separate ie.css stylesheet. A separate IE stylesheet is reduced in importance by SASS allowing nested selectors like the following:
 
-	.lt-ie8 & {
-		
+	.thinger {
+	    .lt-ie8 & {
+            display: none;
+    	}
 	}
-	
-More extensive IE compatibility styling can go in here.
+
+This compiles as follows:
+
+    .lt-ie8 .thinger { display: none; }
+    
+Using these kinds of selects also allows code to be more maintainable my keeping all pieces of related code together. For instance, if you have styles for buttons, your buttons css can include the bass, fallbacks using Modernizr, media queries, and fallbacks for IE, all in the same declaration block.
+
+If you need a more extensive IE stylesheet, ad one as needed.

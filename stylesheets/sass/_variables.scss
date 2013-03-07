@@ -8,9 +8,20 @@
 		  with colour declarations in css.
 	
 	For example, the following are good variable names:
-	$base_font, $header_font, $brand_color, $accent_color, $breakpoint-midsize, $breakpoint-small
+	$font-base, $font-header, $color-brand, $color-accent, $breakpoint-midsize, $breakpoint-small
 	
 	These are bad variable names:
 	$blue, $orange, $helvetica, $ipad, $iphone
+	
+	On naming conventions, a good convention is to use underscores for spaces, and dashes to indicate
+	a subsidiary relationship. This allows you to easily group variables by type.
+	
+	The following are good examples of variable groups named with a dash to indicate descendency:
+	
+	$font-x
+	$font_weight-x
+	$color-x
+	$icon-x
+	$breakpoint-x
 	
 */
