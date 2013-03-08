@@ -1,0 +1,37 @@
+/*
+	Print stylesheet.
+	
+	Include the variable and mixin files, and others as neccesary.
+	
+*/
+/* Variables
+/* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
+/* 
+	Note:
+		+ Mixin names should describe what things ARE, not what they look like.
+		+ As much as it kills me, colour is spelled the American way to be consistant
+		  with colour declarations in css.
+	
+	For example, the following are good variable names:
+	$font-base, $font-header, $color-brand, $color-accent, $breakpoint-midsize, $breakpoint-small
+	
+	These are bad variable names:
+	$blue, $orange, $helvetica, $ipad, $iphone
+	
+	On naming conventions, a good convention is to use underscores for spaces, and dashes to indicate
+	a subsidiary relationship. This allows you to easily group variables by type.
+	
+	The following are good examples of variable groups named with a dash to indicate descendency:
+	
+	$font-x
+	$font_weight-x
+	$color-x
+	$icon-x
+	$breakpoint-x
+	
+*/
+/* The following variables are needed by some of our mixins and can be adjust to meet
+   the needs of the site.
+*/
+/* Mixins
+/* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
