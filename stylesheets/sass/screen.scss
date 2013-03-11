@@ -112,7 +112,14 @@
 */
 
 // @import "modules/default-styles";
-// @import "modules/drupal-reset"; // This resets a lot of default Drupal css
+
+/*
+  Drupal reset.
+  This resets a lot of default Drupal css.
+  NOTE: This file only exists in the drupal branch.
+
+*/
+// @import "modules/drupal-reset";
 
 
 
