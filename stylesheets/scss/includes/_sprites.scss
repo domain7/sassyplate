@@ -18,8 +18,9 @@ $sprites-retina: sprite-map("double/*.png", $layout: smart);
   @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 2) {
     // Workaround for https://gist.github.com/2140082
     @if (sprite-position($sprites, $name) != sprite-position($sprites-retina, $name)) {
+      $xpos: round(nth(sprite-position($sprites-retina, $name), 1) / 2);
       $ypos: round(nth(sprite-position($sprites-retina, $name), 2) / 2);
-      background-position: 0 $ypos;
+      background-position: $xpos $ypos;
     }
     // Grab size of non-retina sprite image.
     @include background-size(image-width(sprite-path($sprites)) image-height(sprite-path($sprites)));
