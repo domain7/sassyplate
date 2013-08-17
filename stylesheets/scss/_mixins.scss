@@ -53,13 +53,13 @@
   @if $weight == normal {
     font-weight: normal;
     font-weight: $font_weight-normal;
-  }
-  @if $weight == bold {
+  } @else if $weight == bold {
     font-weight: bold;
     font-weight: $font_weight-bold;
-  }
-  @if $weight == light {
+  } @else if $weight == light {
     font-weight: lighter;
     font-weight: $font_weight-light;
+  } @else {
+    font-weight: $weight;
   }
 } // @mixin font_weight
