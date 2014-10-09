@@ -12,6 +12,10 @@ javascripts_dir = "js"
 # Use :expanded for development and :compressed for production
 output_style = :expanded
 
+# Source maps! They're great!
+# http://thesassway.com/intermediate/using-source-maps-with-sass
+sourcemap = true
+
 # To enable relative paths to assets via compass helper functions. Uncomment:
 relative_assets = true
 
