@@ -48,5 +48,10 @@ $font-size-body: 14;
 
 // Colours
 // These are just defaults. You're going to want to go ahead and change them.
-$color-brand: #00A4E4;
-$color-base: #222;
+$color-brand: #00A4E4; // the main brand colour, probably the main logo colour
+$color-brand-accent: #999; // the brand accent colour might also be used in the logo, or generally as an accent
+$color-canvas: #eee; // this is probably the background colour of the body element
+$color-canvas-alt: #333; // an alternate canvas colour
+$color-base: #333; // the colour of most body text
+$color-base-alt: #eee; // alternate body text colour, probably used over $color-canvas-alt
+$color-keyline: #666; // line dividers
