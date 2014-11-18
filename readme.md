@@ -43,9 +43,10 @@ and are included like such:
 Our boilerplate's images directory has the following structure:
 
     images/
-          /common
-          /compatibility
-          /double
+          /sprites/
+                  /common-1x
+                  /common-2x
+                  /common-compatibility
 
 All of our sites really should be supporting high pixel density displays (eg, retina). Fortunately Compass's
 spriting ability makes this really easy for us. We can also use spriting to help with compatibility images 
@@ -60,7 +61,7 @@ Included in the template is includes/_sprites.scss. _sprites.scss contains two i
 
 
 To use the sprite-background mixin, you'll need two images of the same name, one in the
-images/comman and one in the images/double directories. The mixin will automatically
+images/sprites/common-1x and one in the images/sprites/common-2x directories. The mixin will automatically
 use the right one.
 
     @include sprite-background(logo);

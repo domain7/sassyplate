@@ -5,8 +5,8 @@
 
 // https://gist.github.com/2878758
 
-$sprites: sprite-map("common/*.png", $layout: smart);
-$sprites-retina: sprite-map("double/*.png", $layout: smart);
+$sprites: sprite-map("sprites/common-1x/*.png", $layout: smart);
+$sprites-retina: sprite-map("sprites/common-2x/*.png", $layout: smart);
 
 @mixin sprite-background($name) {
   background-image: sprite-url($sprites);
