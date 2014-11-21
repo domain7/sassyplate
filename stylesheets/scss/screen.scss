@@ -92,6 +92,18 @@
 
 
 
+/*
+	Site styles 
+	A traditional-style top-down stylesheet. Note that this file isn't always neccesary per se.
+	Rather than putting everything in _style.scss, think about how your stylesheet can be broken
+	up into partials and modules.
+
+*/
+
+@import "style";
+
+
+
 /* 
 	Modules 
 	Self contained pieces of styling that can be reused.
@@ -133,14 +145,3 @@
 	
 */
 
-
-
-/*
-	Site styles 
-	A traditional-style top-down stylesheet. Note that this file isn't always neccesary per se.
-	Rather than putting everything in _style.scss, think about how your stylesheet can be broken
-	up into partials and modules.
-
-*/
-
-@import "style";
