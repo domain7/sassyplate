@@ -93,14 +93,13 @@
 
 
 /*
-	Site styles 
-	A traditional-style top-down stylesheet. Note that this file isn't always neccesary per se.
-	Rather than putting everything in _style.scss, think about how your stylesheet can be broken
-	up into partials and modules.
+  Base styles 
+  This file should be very minimal and only containe the very basic styles.  If this file gets
+  too large, you you probably need to break things out into modules or partials.
 
 */
 
-@import "style";
+@import "base";
 
 
 
