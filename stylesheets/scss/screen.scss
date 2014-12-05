@@ -32,14 +32,15 @@
 @import "compass-config";
 
 // The global reset, based on Eric Meyer's reset
-@import "compass/reset";
+//@import "compass/reset";
 
-// If you prefer Normalize, comment out the @import "compass/reset"; and uncomment the following
-//@import "includes/normalize";
+// Normalize.css makes browsers render all elements more consistently and in
+// line with modern standards. It precisely targets only the styles that need normalizing.
+@import "includes/normalize";
 
 // SASS mixins for CSS3 properties.
 // For documentation, visit: http://compass-style.org/reference/compass/css3/
-@import "compass/css3";
+@import "compass";
 
 
 
