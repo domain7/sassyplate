@@ -38,6 +38,15 @@ and are included like such:
 	
 	@import "includes/library-name";
 
+### Font Awesome
+
+Font Awesome is included in the boilerplate by default. The font and icon variables are in `includes/fontawesome`, with the font files being located at `fonts/fontawesome`. When included variables are created for every icon, named matching the Font Awesome documentation ([fortawesome.github.io/Font-Awesome/icons](http://fortawesome.github.io/Font-Awesome/icons/)) For example, the Facebook icon would be
+
+	$icon-facebook
+
+Other UI modules may rely upon these icon variables. If you want to replace them with say something from [Icomoon](https://icomoon.io/app), you'll need to provide these variables when excluding Font Awesome. Don't worry though, the Compass compiler wil llet you know if you forgot 😜
+
+
 ## Images and sprites
 
 Our boilerplate's images directory has the following structure:
