@@ -44,7 +44,7 @@ Font Awesome is included in the boilerplate by default. The font and icon variab
 
 	$icon-facebook
 
-Other UI modules may rely upon these icon variables. If you want to replace them with say something from [Icomoon](https://icomoon.io/app), you'll need to provide these variables when excluding Font Awesome. Don't worry though, the Compass compiler wil llet you know if you forgot 😜
+Other UI modules may rely upon these icon variables. If you want to replace them with say something from [Icomoon](https://icomoon.io/app), you'll need to provide these variables when excluding Font Awesome. Don't worry though, the Compass compiler will let you know if you forgot 😜
 
 
 ## Images and sprites
