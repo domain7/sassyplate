@@ -2,6 +2,9 @@
 /* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
 
 /* 
+	
+	THESE ARE JUST DEFAULTS and should be changed to suit the needs of your project.
+
 	Note:
 		+ Mixin names should describe what things ARE, not what they look like.
 		+ As much as it kills me, colour is spelled the American way to be consistant
@@ -14,7 +17,8 @@
 	$blue, $orange, $helvetica, $ipad, $iphone
 	
 	On naming conventions, a good convention is to use underscores for spaces, and dashes to indicate
-	a subsidiary relationship. This allows you to easily group variables by type.
+	a subsidiary relationship. All punctuation is meaningful, and this allows you to easily group
+	variables by type.
 	
 	The following are good examples of variable groups named with a dash to indicate descendency:
 	
@@ -35,6 +39,8 @@
 $font-default_stack-serif: "Times New Roman", Times, serif;
 $font-default_stack-sans_serif: "Helvetica Neue", Arial, sans-serif;
 $font-icon: 'FontAwesome' !default;
+// Create your $font-base like this: 👇 'proxima-nova' is an example
+$font-base: proxima-nova, $font-default_stack-sans_serif;
 
 // Font weights
 // Note that these are essential for the font_weight mixin in _mixins.scss
@@ -49,10 +55,16 @@ $font-size-body: 14;
 
 // Colours
 // These are just defaults. You're going to want to go ahead and change them.
-$color-brand: #00A4E4; // the main brand colour, probably the main logo colour
-$color-brand-accent: #999; // the brand accent colour might also be used in the logo, or generally as an accent
-$color-canvas: #eee; // this is probably the background colour of the body element
-$color-canvas-alt: #333; // an alternate canvas colour
 $color-base: #333; // the colour of most body text
-$color-base-alt: #eee; // alternate body text colour, probably used over $color-canvas-alt
-$color-keyline: #666; // line dividers
+$color-brand: #e44053; // the main brand colour, probably the main logo colour
+$color-brand-accent: #1d988a; // the brand accent colour might also be used in the logo, or generally as an accent
+$color-canvas: #fff; // this is probably the background colour of the body element
+$color-canvas-alt: #ebedec; // an alternate canvas colour. If needed define a $color-base-alt for copy ont this
+$color-keyline: #d7d7d7; // line dividers
+
+// Breakpoints
+$breakpoint-full: 1400px;
+$breakpoint-large: 1200px;
+$breakpoint-mid: 820px;
+$breakpoing-small: 600px;
+$breakpoint-smaller: 420px; // 👽

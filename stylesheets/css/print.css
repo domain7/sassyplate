@@ -7,6 +7,9 @@
 /* Variables
 /* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
 /* 
+	
+	THESE ARE JUST DEFAULTS and should be changed to suit the needs of your project.
+
 	Note:
 		+ Mixin names should describe what things ARE, not what they look like.
 		+ As much as it kills me, colour is spelled the American way to be consistant
@@ -19,7 +22,8 @@
 	$blue, $orange, $helvetica, $ipad, $iphone
 	
 	On naming conventions, a good convention is to use underscores for spaces, and dashes to indicate
-	a subsidiary relationship. This allows you to easily group variables by type.
+	a subsidiary relationship. All punctuation is meaningful, and this allows you to easily group
+	variables by type.
 	
 	The following are good examples of variable groups named with a dash to indicate descendency:
 	

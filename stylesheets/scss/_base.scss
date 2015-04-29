@@ -1,10 +1,10 @@
-html,
 body {
-
+	font-family: $font-base;
+	color: $color-base;
 }
 
 p, ul, ol {
 	&:last-of-type {
-		margin-bottom: 0;
+		margin-bottom: 0; // This is because of normalize. If you Meyer you have it anyway.
 	}
 }
