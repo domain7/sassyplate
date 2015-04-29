@@ -51,11 +51,11 @@ Other UI modules may rely upon these icon variables. If you want to replace them
 
 Our boilerplate's images directory has the following structure:
 
-    images/
-          /sprites/
-                  /common-1x
-                  /common-2x
-                  /common-compatibility
+		images/
+					/sprites/
+									/common-1x
+									/common-2x
+									/common-compatibility
 
 All of our sites really should be supporting high pixel density displays (eg, retina). Fortunately Compass's
 spriting ability makes this really easy for us. We can also use spriting to help with compatibility images 
@@ -65,15 +65,15 @@ Note that all sprite images need to be saved as png's.
 
 Included in the template is includes/_sprites.scss. _sprites.scss contains two items:
 
-  - A sprite-background mixin for sprites with a high pixel density counterpart
-  - A template to use vanilla compass sprites for compatibility
+	- A sprite-background mixin for sprites with a high pixel density counterpart
+	- A template to use vanilla compass sprites for compatibility
 
 
 To use the sprite-background mixin, you'll need two images of the same name, one in the
 images/sprites/common-1x and one in the images/sprites/common-2x directories. The mixin will automatically
 use the right one.
 
-    @include sprite-background(logo);
+		@include sprite-background(logo);
 
 The template for vanilla compass sprites for compatibility is intended to be used for 
 older broser support. Think rounded corners and such things. Compatibility sprite images
@@ -97,24 +97,28 @@ and included like such:
 
 	@import "modules/module-name";
 
-## _style.scss
+### modules/_default-styles.scss
 
-A traditional-style top-down stylesheet.
+This module adds default styles to wysiwyg areas (maybe add a `.wysiwyg` for this?), most useful when using the Meyer reset. This isn't for generic site styles, which go in `_base.scss`.
+
+## _base.scss
+
+Any global styling needed goes here. This shouldn't become an everything bucket ala the old school `screen.css` file.
 
 ## ie.scss
 
 We no longer include a separate ie.css stylesheet. A separate IE stylesheet is reduced in importance by SASS allowing nested selectors like the following:
 
 	.thinger {
-	    .lt-ie8 & {
-            display: none;
-    	}
+			.lt-ie8 & {
+						display: none;
+			}
 	}
 
 This compiles as follows:
 
-    .lt-ie8 .thinger { display: none; }
-    
+		.lt-ie8 .thinger { display: none; }
+		
 Using these kinds of selects also allows code to be more maintainable my keeping all pieces of related code together. For instance, if you have styles for buttons, your buttons css can include the bass, fallbacks using Modernizr, media queries, and fallbacks for IE, all in the same declaration block.
 
 If you need a more extensive IE stylesheet, ad one as needed.
