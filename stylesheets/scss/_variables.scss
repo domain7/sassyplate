@@ -68,3 +68,28 @@ $breakpoint-large: 1200px;
 $breakpoint-mid: 820px;
 $breakpoing-small: 600px;
 $breakpoint-smaller: 420px; // 👽
+
+// Social icons
+$social_sites: (
+	facebook: $icon-facebook,
+	twitter: $icon-twitter,
+	google_plus: $icon-google-plus,
+	linkedin: $icon-linkedin,
+	pinterest: $icon-pinterest,
+	flickr: $icon-flickr,
+	instagram: $icon-instagram,
+	youtube: $icon-youtube,
+	vimeo: $icon-vimeo-square,
+);
+
+$social_sites-square: (
+	facebook: $icon-facebook-square,
+	twitter: $icon-twitter-square,
+	google_plus: $icon-google-plus-square,
+	linkedin: $icon-linkedin-square,
+	pinterest: $icon-pinterest-square,
+	flickr: $icon-flickr,
+	instagram: $icon-instagram,
+	youtube: $icon-youtube-square,
+	vimeo: $icon-vimeo-square,
+);
