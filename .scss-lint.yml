@@ -1,0 +1,248 @@
+# Read more details & settings here:
+# https:#github.com/causes/scss-lint/blob/master/lib/scss_lint/linter/README.md
+
+linters:
+
+  # Reports when you use improper spacing around ! (the "bang") in !important and !default declarations.
+  BangFormat:
+    enabled: true
+    space_defore_bang: true
+    space_after_bang: false
+
+  # Prefer the terser border: 0 over border: none.
+  BorderZero:
+    enabled: false
+    convention: none # 0 (default) or none
+
+  # Prefer hexadecimal color codes over color keywords.
+  ColorKeyword:
+    enabled: true
+
+  # Prefer color literals (keywords or hexadecimal codes) to be used only in variable declarations.
+  ColorVariable:
+    enabled: false
+
+  # Prefer # comments over /* ... */.
+  Comment:
+    enabled: false
+
+  # https:#github.com/causes/scss-lint/blob/master/lib/scss_lint/linter/compass/README.md
+  Compass Linters:
+    enabled: true
+
+  # Reports @debug statements (which you probably left behind accidentally).
+  DebugStatement:
+    enabled: true
+
+  # Rule sets should be ordered as follows: @extend declarations, @include declarations without inner @content, properties, @include declarations with inner @content, then nested rule sets.
+  DeclarationOrder:
+    enabled: false # Turned this to false so I could use breakpoint mixin wherever I wanted to.
+
+  # Reports when you define the same property twice in a single rule set.
+  DuplicateProperty:
+    enabled: true
+
+  # Place @else statements on the same line as the preceding curly brace.
+  ElsePlacement:
+    enabled: true
+    style: same_line # same_line (default) or new_line
+
+  # Separate rule, function, and mixin declarations with empty lines.
+  EmptyLineBetweenBlocks:
+    enabled: false
+    ignore_single_line_blocks: true
+
+  # Reports when you have an empty rule set.
+  EmptyRule:
+    enabled: true
+
+  # Files should always have a final newline. This results in better diffs when adding lines to the file, since SCM systems such as git won't think that you touched the last line.
+  FinalNewline:
+    enabled: true
+    present: true # Whether a final newline should be present (default true)
+
+  # You can specify whether you prefer shorthand or long-form hexadecimal colors by setting the style option to short or long, respectively.
+  HexLength:
+    enabled: true
+    style: short # prefer short (default) or long
+
+  # Checks if hexadecimal colors are written in lowercase. You can specify which case with the style option.
+  HexNotation:
+    enabled: true
+    style: lowercase # Prefer lowercase (default) or uppercase
+
+  # Ensure hexadecimal colors are valid (either three or six digits).
+  HexValidation:
+    enabled: true
+
+  # Avoid using ID selectors.
+  IdSelector:
+    enabled: false
+
+  # Allow use of nav#id selectors
+  IdWithExtraneousSelector:
+    enabled: true
+
+  # Avoid using !important in properties. It is usually indicative of a misunderstanding of CSS specificity and can lead to brittle code.
+  ImportantRule:
+    enabled: true
+
+  # The basenames of @imported SCSS partials should not begin with an underscore and should not include the filename extension.
+  ImportPath:
+    enabled: true
+    leading_underscore: false
+    filename_extension: false
+
+  # Use two spaces per indentation level.
+  Indentation:
+    enabled: false
+    allow_non_nested_indentation: false # Whether non-nested rule sets can be arbitrarily indented
+    character: tab # tab or space
+    width: 4
+
+  # Don't write leading zeros for numeric values with a decimal point.
+  LeadingZero:
+    enabled: false
+    style: exclude_zero # exclude_zero (default) or include_zero
+
+  # Reports when you define the same selector twice in a single sheet.
+  MergeableSelector:
+    enabled: true
+    force_nesting: true # Ensure rule sets which can be nested are nested
+
+  # Functions, mixins, and variables should be declared with all lowercase letters and hyphens instead of underscores
+  NameFormat:
+    enabled: false
+    allow_leading_underscore: true
+    convention: hyphenated_lowercase # Name of convention to use (hyphenated_lowercase (default) or BEM), or a regex the name must match
+
+  # Avoid nesting selectors too deeply.
+  NestingDepth:
+    enabled: true
+    max_depth: 5
+
+  # Always use placeholder selectors in @extend.
+  PlaceholderInExtend:
+    enabled: true
+
+  # Limit the number of properties in a rule set.
+  PropertyCount:
+    enabled: false
+    include_nested: true
+    max_properties: 25
+
+  # Sort properties in a strict order. By default, will require properties be sorted in alphabetical order, as it's brain dead simple
+  PropertySortOrder:
+    enabled: false
+    ignore_unspecified: false
+    order: nil # concentric, recess, smacss or nil (alphabetical)
+    separate_groups: false
+
+  # extra_properties # List of extra properties to allow
+  PropertySpelling:
+    enabled: true
+
+  # Avoid qualifying elements in selectors (also known as "tag-qualifying").
+  QualifyingElement:
+    enabled: true
+    allow_element_with_attribute: false # Allow elements to qualify attributes (default false)
+    allow_element_with_class: false # Allow elements to qualify classes (default false)
+    allow_element_with_id: false # Allow elements to qualify ids (default false)
+
+  # Don't write selectors with a depth of applicability greater than 3.
+  SelectorDepth:
+    enabled: true
+    max_depth: 5 # Maximum depth before reporting errors (default 3)
+
+  # It is good practice to choose a convention for naming selectors.
+  SelectorFormat:
+    enabled: false
+    convention: hyphenated_lowercase # Name of convention to use (hyphenated_lowercase (default) or snake_case, camel_case, or BEM, or hyphenated_BEM), or a regex the name must match
+    # ignored_names: # Array of whitelisted names to not report lints for.
+    # ignored_types: # Array containing list of types of selectors to ignore (valid values are attribute, class, element, id, placeholder)
+    # attribute_convention: # Convention for attribute selectors only. See the convention option for possible values.
+    # class_convention: # Convention for class selectors only. See the convention option for possible values.
+    # id_convention Convention: # for id selectors only. See the convention option for possible values.
+    # placeholder_convention: # Convention for placeholder selectors only. See the convention option for possible values.
+
+  # Prefer the shortest shorthand form possible for properties that support it.
+  Shorthand:
+    enabled: true
+
+  # Properties within rule sets should each reside on their own line.
+  SingleLinePerProperty:
+    enabled: true
+    allow_single_line_rule_sets: true # true or false (default true)
+
+  # Split selectors onto separate lines after each comma.
+  SingleLinePerSelector:
+    enabled: true
+
+  # Commas in lists should be followed by a space.
+  SpaceAfterComma:
+    enabled: true
+
+  # Properties should be formatted with a single space separating the colon from the property's value.
+  SpaceAfterPropertyColon:
+    enabled: true
+    style: one_space # one_space, no_space, at_least_one_space, or aligned (default one_space)
+
+  # Properties should be formatted with no space between the name and the colon.
+  SpaceAfterPropertyName:
+    enabled: true
+
+  # Opening braces should be preceded by a single space.
+  SpaceBeforeBrace:
+    enabled: true
+    allow_single_line_padding: false # Allow single line blocks to have extra spaces for nicer formatting (default false)
+    style: space # space or new_line (default space)
+
+  # Parentheses should not be padded with spaces.
+  SpaceBetweenParens:
+    enabled: true
+    spaces: 0 # Spaces to require between parentheses (default 0)
+
+  # String literals should be written with single quotes unless using double quotes would save on escape characters.
+  StringQuotes:
+    enabled: true
+    style: single_quotes # single_quotes or double_quotes (default single_quotes)
+
+  # Property values; @extend, @include, and @import directives; and variable declarations should always end with a semicolon.
+  TrailingSemicolon:
+    enabled: true
+
+  # Don't write trailing zeros for numeric values with a decimal point.
+  TrailingZero:
+    enabled: true
+
+  # Numeric values should not contain unnecessary fractional portions.
+  UnnecessaryMantissa:
+    enabled: true
+
+  # Do not use parent selector references (&) when they would otherwise be unnecessary.
+  UnnecessaryParentReference:
+    enabled: true
+
+  # URLs should not contain protocols or domain names.
+  UrlFormat:
+    enabled: true
+
+  # URLs should always be enclosed within quotes.
+  UrlQuotes:
+    enabled: true
+
+  # Properties, like color and font, are easier to read and maintain when defined using variables rather than literals.
+  VariableForProperty:
+    enabled: true
+    properties: ['font-family']
+
+  # Avoid vendor prefixes. That is, don't write them yourself.
+  VendorPrefixes:
+    enabled: true
+    # identifier_list: # Name of predefined identifier list to use (base or bourbon) or an array of identifiers (default base)
+    include: [] # Identifiers to lint, in addition to the identifier_list (default [])
+    exclude: [] # Identifers in the identifier_list to exclude from linting (default [])
+
+  # Omit length units on zero values.
+  ZeroUnit:
+    enabled: true
