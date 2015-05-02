@@ -4,6 +4,9 @@ body {
 }
 
 p, ul, ol {
+	&:first-of-type {
+		margin-top: 0; // This is because of normalize. If you Meyer you have it anyway.
+	}
 	&:last-of-type {
 		margin-bottom: 0; // This is because of normalize. If you Meyer you have it anyway.
 	}
