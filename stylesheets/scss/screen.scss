@@ -49,12 +49,26 @@
 
 /*
   Fonts
-  
+
   Any @font-face or third party font imports should go in this file
 
 */
 
 @import "fonts";
+
+
+/*
+	Libraries, variables, sprites, and mixins
+
+	An example of a SASS library is http://github.com/nathanshubert/Unicode-Shapes-Preprocessor-Library.
+	They should be prefixed with an underscore, stored in the includes directory,
+	and are included like such:
+	@import "includes/library-name";
+
+	Variables and mixins are also included here.
+
+*/
+
 
 /*
   Font awesome
@@ -63,46 +77,42 @@
 @import "includes/fontawesome";
 
 
-/*
-	Libraries, variables, sprites, and mixins 
-
-	An example of a SASS library is http://github.com/nathanshubert/Unicode-Shapes-Preprocessor-Library.
-	They should be prefixed with an underscore, stored in the includes directory,
-	and are included like such:
-	@import "includes/library-name";
-	
-	Variables and mixins are also included here.
-	
-*/
-
 @import "variables";
 @import "mixins";
 
 
+/*
+	Utility and layout classes
+*/
 
-/* 
-	Sprites 
-  To use compass's sprite generating awesomeness, uncomment the include following this 
-  comment block. 
+@import "utility";
+@import "layout";
+
+
+
+/*
+	Sprites
+  To use compass's sprite generating awesomeness, uncomment the include following this
+  comment block.
 
   _sprites.scss contains two items:
     - A sprite-background mixin for sprites with a high pixel density counterpart
     - A template to use vanilla compass sprites for compatibility
-  
+
   To use the sprite-background mixin, you'll need two images of the same name, one in the
   images/sprites/common-1x and one in the images/sprites/common-2x directories. The mixin will automatically
   use the right one.
-  
-  The template for vanilla compass sprites for compatibility is intended to be used for 
+
+  The template for vanilla compass sprites for compatibility is intended to be used for
   older broser support. Think rounded corners and such things.
-  
+
 */
 // @import "includes/sprites";
 
 
 
 /*
-  Base styles 
+  Base styles
   This file should be very minimal and only containe the very basic styles.  If this file gets
   too large, you you probably need to break things out into modules or partials.
 
@@ -112,18 +122,18 @@
 
 
 
-/* 
-	Modules 
+/*
+	Modules
 	Self contained pieces of styling that can be reused.
-	Modules should have the following characteristics: 
+	Modules should have the following characteristics:
 		+ Be context independent so they can be used anywhere.
 		+ Defined within a mixin so that they can be used easily, anywhere.
 		+ Be applied to a class that describes what the element IS, not what it looks like.
 		+ Contain their own variations, fallbacks, and possibly media queries
-	
+
 	Buttons are a good example of a module.
 
-	Module files should be prefixed with an underscore, stored in the modules directory, 
+	Module files should be prefixed with an underscore, stored in the modules directory,
 	and included like such:
 	@import "modules/module-name";
 
@@ -143,13 +153,13 @@
 
 
 
-/* 
-	Partials 
+/*
+	Partials
 	Pieces of code that aren't modular in nature, but are broken off for easier maintainability.
-	
+
 	Partials should be prefixed with an underscore, stored in the partials directory,
 	and included as such:
 	@import "partials/partial-name";
-	
+
 */
 
