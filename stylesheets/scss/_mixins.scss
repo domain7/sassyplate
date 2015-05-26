@@ -14,11 +14,7 @@
   } // after
 } // @mixin clearfix
 
-%clearfix {
-  @include clearfix;
-}
-
-@mixin hover_focus_underline {
+@mixin hover-focus-underline {
 	text-decoration: none;
 	&:hover,
 	&:focus {
@@ -26,7 +22,7 @@
 	} // hover, focus
 } // @mixin hover_focus_underline
 
-@mixin no_list {
+@mixin no-list {
   // This one is particularly useful in Drupal where list often use list-style-image
   list-style-image: none;
   list-style-position: outside;
@@ -34,7 +30,7 @@
   list-style: none;
 } // @mixin nolist
 
-@mixin responsive_image {
+@mixin responsive-image {
   max-width: 100%;
   height: auto;
   .ie8 & {
@@ -42,18 +38,18 @@
   } // ie8
 } // @mixin responsive_image
 
-@mixin font_size($size) {
+@mixin font-size($size) {
   font-size: $size+px;
   font-size: $size/10+rem;
 } // @mixin font_size
 
-@mixin inline_block {
+@mixin inline-block {
   display: inline-block;
   zoom: 1;
   *display: inline;
 } // @mixin inline-block
 
-@mixin font_weight($weight) {
+@mixin font-weight($weight) {
   @if $weight == normal {
     font-weight: normal;
     font-weight: $font_weight-normal;
@@ -67,18 +63,3 @@
     font-weight: $weight;
   }
 } // @mixin font_weight
-
-%icon_font {
-  font-family: $font-icon;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  text-rendering: auto;
-  transform: translate(0, 0);
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
