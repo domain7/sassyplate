@@ -38,6 +38,7 @@
     // Don't show links for images, or javascript/internal links
 
     a[href^="javascript:"]:after,
+    a[href^="tel:"*]:after,
     a[href^="#"]:after {
         content: "";
     }
