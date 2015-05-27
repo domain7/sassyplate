@@ -35,9 +35,8 @@
         content: " (" attr(title) ")";
     }
 
-    // Don't show links for images, or javascript/internal links
+    // Don't show links for fragment identifiers, or :tel links
 
-    a[href^="javascript:"]:after,
     a[href^="tel:"*]:after,
     a[href^="#"]:after {
         content: "";
