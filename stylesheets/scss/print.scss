@@ -1,10 +1,81 @@
 /*
 	Print stylesheet.
-	
+
 	Include the variable and mixin files, and others as neccesary.
-	
+
+	Add anything you want to hide near the end of the file
+	along with the screen reader elements and skip links.
+
 */
 
 @import 'includes/fontawesome';
 @import 'variables';
 @import 'mixins';
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; // Black prints faster
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")"; // this prints the url after the link text
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    // Don't show links for fragment identifiers, or :tel links
+
+    a[href^="tel:"*]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #000;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important; // Avoid images bleeding off the edges of the page
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+
+    // Things to be hidden
+    .u-screen-reader,
+    .skip-links__link {
+      display: none;
+    }
+}
