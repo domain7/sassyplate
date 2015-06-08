@@ -38,9 +38,15 @@
   } // ie8
 } // @mixin responsive_image
 
+//rem fallback.  Usage: @include rem(font-size, 1.4);
+@mixin rem($property, $rem) {
+  #{$property}: #{$rem*10}px;
+  #{$property}: #{$rem}rem;
+}
+
+//The old rem fallback
 @mixin font-size($size) {
-  font-size: $size+px;
-  font-size: $size/10+rem;
+  @include rem(font-size, $size/10);
 } // @mixin font_size
 
 @mixin inline-block {
