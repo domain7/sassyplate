@@ -45,6 +45,7 @@
 }
 
 //The old rem fallback
+//NOTE: this can be removed after Sep 9, 2015
 @mixin font-size($size) {
   @include rem(font-size, $size/10);
 } // @mixin font_size
