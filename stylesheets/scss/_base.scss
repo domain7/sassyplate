@@ -1,3 +1,13 @@
+html {
+	@include border-box-sizing;
+}
+
+*,
+*:after,
+*:before {
+	@include box-sizing(inherit);
+}
+
 body {
 	font-family: $font-base;
 	color: $color-base;
