@@ -1,5 +1,5 @@
 html {
-	@include border-box-sizing;
+	@include box-sizing(border-box);
 }
 
 *,
