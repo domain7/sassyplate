@@ -28,19 +28,19 @@ $susy: (
   max-width: $breakpoint-large;
   margin-left: auto;
   margin-right: auto;
-  padding-left: $body-gutter - gutter();
-  padding-right: $body-gutter - gutter();
+  padding-left: $gutter-body - gutter();
+  padding-right: $gutter-body - gutter();
   .no-mediaqueries & {
     min-width: $breakpoint-no-mediaqueries;
   }
   //Scale up
   @media (min-width: $breakpoint-large + 1) {
-    padding-left: $body-gutter-large - gutter();
-    padding-right: $body-gutter-large - gutter();
+    padding-left: $gutter-body-large - gutter();
+    padding-right: $gutter-body-large - gutter();
   }
   //Scale Down
   @media (max-width: $breakpoint-small) {
-    padding-left: $body-gutter-small - gutter();
-    padding-right: $body-gutter-small - gutter();
+    padding-left: $gutter-body-small - gutter();
+    padding-right: $gutter-body-small - gutter();
   }
 }
