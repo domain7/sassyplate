@@ -1,0 +1,53 @@
+.wysiwyg {
+ 	a {
+		@include hover_focus_underline;
+		color: $color-brand;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	} // img, iframe
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		display: block;
+		clear: both;
+	}
+
+	//
+	// Styles specific to the WordPress wysiwyg
+	//
+	.alignleft {
+		float: left;
+		margin: 5px 15px 5px 0;
+	} // .alignleft
+	.aligncenter {
+		display: block;
+		margin: 10px auto;
+	}
+	.alignright {
+		float: right;
+		margin: 5px 0 5px 15px;
+	}
+	.alignnone {
+		display: block;
+		margin: 5px 0;
+	} // .alignnone
+	.gallery {
+		overflow: hidden;
+		.gallery-item {
+			width: 0.166666667%;
+			margin: 0 0 2%;
+			a {
+				display: block;
+				img {
+					display: block;
+				} // img
+			} // a
+		} // .gallery-item
+	} // .gallery
+
+} // .wysiwyg
