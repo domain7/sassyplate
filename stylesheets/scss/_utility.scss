@@ -23,8 +23,12 @@
 .u-reverse {
 	color: $color-canvas;
 	* {
-		color: $color-canvas;
+		color: inherit;
 	}
+	a:hover,
+	a:focus {
+		color: inherit;
+	} // a:hover
 }
 
 %u-screen-reader,
