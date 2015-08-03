@@ -70,16 +70,11 @@
 */
 
 
-/*
-  Font awesome
-*/
-
-@import "includes/fontawesome";
 
 
-@import "variables";
 @import "mixins";
-
+@import "includes/fontawesome";
+@import "variables";
 
 /*
 	Utility and layout classes
