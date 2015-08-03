@@ -3,6 +3,22 @@
 
 // -- Mixins for common patterns, utility and compatability -- //
 
+@mixin icon($icon: false, $family: $font-icon) {
+  font-family: $family;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @if ($icon) {
+    content: $icon;
+  }
+}
+
 @mixin clearfix {
   zoom: 1;  // Triggering "hasLayout" in IE
   &:after {
@@ -70,3 +86,15 @@
     font-weight: $weight;
   }
 } // @mixin font_weight
+
+@mixin full-width {
+  width: 100%;
+  float: none;
+  clear: both;
+}
+
+@mixin small-full {
+  @media (max-width: $breakpoint-small) {
+    @include full-width;
+  } // small
+}

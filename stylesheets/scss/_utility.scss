@@ -1,25 +1,7 @@
-%u-icon-font,
-.u-icon-font {
-	font-family: $font-icon;
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	text-rendering: auto;
-	transform: translate(0, 0);
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-%u-clearfix,
 .u-clearfix {
 	@include clearfix;
 }
 
-%u-reverse,
 .u-reverse {
 	color: $color-canvas;
 	* {
@@ -31,7 +13,6 @@
 	} // a:hover
 }
 
-%u-screen-reader,
 .u-screen-reader {
 	position: absolute;
 	left: -10000px;
