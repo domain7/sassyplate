@@ -75,10 +75,10 @@ $breakpoint-small: 600px;
 $breakpoint-smaller: 420px; // 👽
 $breakpoint-no-mediaqueries: 1020px;
 
-//Guttes
+//Grid/Susy Guttes
 $gutter-body: 40px;
-$gutter-body-small: 20px;
-$gutter-body-large: 60px;
+$gutter-column: 20px;
+$column-count: 12;
 
 // Social icons
 $social_sites: (
