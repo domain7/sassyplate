@@ -98,3 +98,20 @@
     @include full-width;
   } // small
 }
+
+@mixin accessible-hide {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+@mixin accessible-unhide {
+  position: relative;
+  left: auto;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
+
