@@ -15,7 +15,9 @@ The minimal `.editorconfig` file is in place for the development of the boilerpl
 
 The watched directory should be the theme directory, with your stylesheet directory being a child of that.
 
-## screen.scss
+## File structure
+
+### screen.scss
 
 This file is your main compiled stylesheet, and screen.css should be included by your document.
 
@@ -29,14 +31,12 @@ This file acts as an asset manager and loads the following:
 * Partials (parts of styling broken off for maintainability)
 * A top-down stylesheet
 
-Note that files are included in order of necessity. For example, Compass CSS stuff can be used in
-variables which can be used in mixins, modules, site styles, etc.
+Note that files are included in order of necessity. For example, Compass CSS stuff can be used in variables which can be used in mixins, modules, site styles, etc.
 
-What about media queries?
-Note that since SASS allows you to nest @media declarations, separate stylesheets containing
-media queries are unnecessary. Nesting @media declarations also reinforces a modular approach.
+#### What about media queries?
+Note that since SASS allows you to nest @media declarations, separate stylesheets containing media queries are unnecessary. Nesting @media declarations also reinforces a modular approach.
 
-## Libraries, variables, and mixins
+### Libraries, variables, and mixins
 
 An example of a SASS library is http://github.com/nathanshubert/Unicode-Shapes-Preprocessor-Library.
 They should be prefixed with an underscore, stored in the includes directory,
