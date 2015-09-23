@@ -17,9 +17,9 @@ The watched directory should be the theme directory, with your stylesheet direct
 
 ## File structure
 
-### screen.scss
+### style.scss
 
-This file is your main compiled stylesheet, and screen.css should be included by your document.
+This file is your main compiled stylesheet, and style.css should be included by your document.
 
 This file acts as an asset manager and loads the following:
 
@@ -109,7 +109,7 @@ This module adds default styles to wysiwyg areas (maybe add a `.wysiwyg` for thi
 
 ## _base.scss
 
-Any global styling needed goes here. This shouldn't become an everything bucket ala the old school `screen.css` file.
+Any global styling needed goes here. This shouldn't become an everything bucket ala the old school `style.css` file.
 
 ## ie.scss
 
