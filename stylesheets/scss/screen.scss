@@ -1,43 +1,43 @@
 // Config variables for Compass
-@import "compass-config";
+@import 'compass-config';
 
 // Normalize.css makes browsers render all elements more consistently and in
 // line with modern standards. It precisely targets only the styles that need normalizing.
-@import "includes/normalize";
+@import 'includes/normalize';
 
 // Optional reset for Drupal
-// @import "includes/drupal-reset";
+// @import 'includes/drupal-reset';
 
 // SASS mixins for CSS3 properties. http://compass-style.org/reference/compass/css3/
-@import "compass";
-@import "susy";
+@import 'compass';
+@import 'susy';
 
 // Fonts, mixins, variables, etc
-@import "fonts";
-@import "mixins";
-@import "includes/flexbox";
-@import "includes/fontawesome";
-@import "variables";
+@import 'fonts';
+@import 'mixins';
+@import 'includes/flexbox';
+@import 'includes/fontawesome';
+@import 'variables';
 
 // Utility and layout classes
-@import "utility";
-@import "layout";
+@import 'utility';
+@import 'layout';
 
 // Sprites
-// @import "includes/sprites";
+// @import 'includes/sprites';
 
 // Base styles. This file should be very minimal, containing very basic styles.
-@import "base";
+@import 'base';
 
 // Modules, self contained pieces of styling that can be reused.
-@import "modules/wysiwyg";
+@import 'modules/wysiwyg';
 
 // Drupal reset. This resets a lot of default Drupal css.
 // NOTE: This file only exists in the drupal branch.
-// @import "modules/drupal-reset";
+// @import 'modules/drupal-reset';
 
 // Partials
-// @import "partials/partial-name";
+// @import 'partials/partial-name';
 
 // Print, inlined to avoid the additional HTTP request: h5bp.com/r
-@import "print";
+@import 'print';
