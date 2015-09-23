@@ -37,15 +37,25 @@ Note that files are included in order of necessity. For example, Compass CSS stu
 Note that since SASS allows you to nest @media declarations, separate stylesheets containing media queries are unnecessary. Nesting @media declarations also reinforces a modular approach.
 
 ### Libraries, variables, and mixins
-
 An example of a SASS library is http://github.com/nathanshubert/Unicode-Shapes-Preprocessor-Library.
 They should be prefixed with an underscore, stored in the includes directory,
 and are included like such:
 
 	@import "includes/library-name";
 
-### Font Awesome
+### Variables/maps
+Common values should be stored in variables/maps. To enable looping and level 2 ninja moves, many common variables have been moved to maps with accompanying functions. The previous variable names are still available for now for compatibility.
 
+For example, `$color-base` is now accessible using `color(base)`. For more background, read https://viget.com/extend/sass-with-maps
+
+#### Map getter functions
+* `color()`
+* `font()`
+* `weight()`
+* `breakpoint()`
+
+
+### Font Awesome
 Font Awesome is included in the boilerplate by default. The font and icon variables are in `includes/fontawesome`, with the font files being located at `fonts/fontawesome`. When included variables are created for every icon, named matching the Font Awesome documentation ([fortawesome.github.io/Font-Awesome/icons](http://fortawesome.github.io/Font-Awesome/icons/)) For example, the Facebook icon would be
 
 	$icon-facebook
