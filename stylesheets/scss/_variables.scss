@@ -35,52 +35,122 @@
    the needs of the site.
 */
 
-// Fonts
-$font-default_stack-serif: "Times New Roman", Times, serif;
-$font-default_stack-sans_serif: "Helvetica Neue", Arial, sans-serif;
-$font-icon: 'FontAwesome' !default;
-// Create your $font-base like this: 👇 'proxima-nova' is an example
-$font-base: proxima-nova, $font-default_stack-sans_serif;
+
+/**
+ * Fonts
+ */
+
+// Define the fonts to be used
+$font-stack-base: proxima-nova; // < change me!
+
+// Fonts used in the fallback stack
+$font-stack-sans: "Helvetica Neue", Arial, sans-serif;
+$font-stack-serif: "Times New Roman", Times, serif;
+
+$fonts: (
+	icon: FontAwesome,
+	base: $font-stack-base#{', '}$font-stack-sans
+);
+
+@function font($key) {
+  @return map-get($fonts, $key);
+}
+
+// Compatability variables
+$font-icon: font(icon) !default;
+$font-base: font(base);
 
 // Font weights
 // Note that these are essential for the font_weight mixin in _mixins.scss
-$font-weight-light: 100;
-$font-weight-medium: 400;
-$font-weight-normal: $font-weight-medium; // Basically an alias, for convenience
-$font-weight-bold: 700;
-$font-weight-black: 900;
+$font-weights: (
+	light: 100,
+	medium: 400,
+	normal: 400,
+	bold: 700,
+	black: 900
+);
+
+@function weight($key) {
+  @return map-get($font-weights, $key);
+}
+
+// Compatability variables
+$font-weight-light: weight(light);
+$font-weight-medium: weight(medium);
+$font-weight-normal: weight(normal);
+$font-weight-bold: weight(bold);
+$font-weight-black: weight(black);
 
 // Font sizes
 $font-size-body: 14;
 
-// Colours
-// These are just defaults. You're going to want to go ahead and change them.
-$color-base: #333; // the colour of most body text
-$color-brand: #e44053; // the main brand colour, probably the main logo colour
-$color-brand-accent: #1d988a; // the brand accent colour might also be used in the logo, or generally as an accent
-$color-canvas: #fff; // this is probably the background colour of the body element
-$color-canvas-alt: #ebedec; // an alternate canvas colour. If needed define a $color-base-alt for copy ont this
-$color-keyline: #d7d7d7; // line dividers
+
+/**
+ * Colours
+ * These are just defaults. You're going to want to go ahead and change them.
+ */
+$colors: (
+	base: #333, // the colour of most body text
+	brand: #e44053, // the main brand colour, probably the main logo colour
+	brand-accent: #1d988a, // the brand accent colour might also be used in the logo, or generally as an accent
+	canvas: #fff, // this is probably the background colour of the body element
+	canvas-alt: #ebedec, // an alternate canvas colour. If needed define a base-alt for copy ont this
+	keyline: #d7d7d7, // line dividers
+	state-error: #ae0c14,
+	state-success: #4c7c47,
+	state-warning: #334558
+);
+
+@function color($key) {
+  @return map-get($colors, $key);
+}
+
+// Compatability variables
+$color-base: color(base); // the colour of most body text
+$color-brand: color(brand); // the main brand colour, probably the main logo colour
+$color-brand-accent: color(brand-accent); // the brand accent colour might also be used in the logo, or generally as an accent
+$color-canvas: color(canvas); // this is probably the background colour of the body element
+$color-canvas-alt: color(canvas-alt); // an alternate canvas colour. If needed define a $color-base-alt for copy ont this
+$color-keyline: color(keyline); // line dividers
 // Colours for states
-$color-state-error: #ae0c14;
-$color-state-success: #4c7c47;
-$color-state-warning: #334558;
+$color-state-error: color(state-error);
+$color-state-success: color(state-success);
+$color-state-warning: color(warning);
 
 
-// Breakpoints
-$breakpoint-full: 1400px;
-$breakpoint-large: 1200px;
-$breakpoint-mid: 820px;
-$breakpoint-small: 600px;
-$breakpoint-smaller: 420px; // 👽
-$breakpoint-no-mediaqueries: 1020px;
+/**
+ * Breakpoints and grid
+ */
+$breakpoints: (
+	full: 1400px,
+	large: 1200px,
+	mid: 820px,
+	small: 600px,
+	smaller: 420px, // 👽
+	no-mediaqueries: 1020px
+);
+
+@function breakpoint($key) {
+  @return map-get($breakpoints, $key);
+}
+
+// Compatability variables
+$breakpoint-full: breakpoint(full);
+$breakpoint-large: breakpoint(large);
+$breakpoint-mid: breakpoint(mid);
+$breakpoint-small: breakpoint(small);
+$breakpoint-smaller: breakpoint(smaller);
+$breakpoint-no-mediaqueries: breakpoint(no-mediaqueries);
 
 //Grid/Susy Guttes
 $gutter-body: 40px;
 $gutter-column: 20px;
 $column-count: 12;
 
-// Social icons
+
+/**
+ * Social icons
+ */
 $social_sites: (
 	facebook: $icon-facebook,
 	twitter: $icon-twitter,
