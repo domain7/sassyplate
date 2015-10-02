@@ -1,5 +1,5 @@
 // Config variables for Compass
-@import 'compass-config';
+@import 'includes/compass-config';
 
 // Normalize.css makes browsers render all elements more consistently and in
 // line with modern standards. It precisely targets only the styles that need normalizing.
@@ -13,21 +13,21 @@
 @import 'susy';
 
 // Fonts, mixins, variables, etc
-@import 'fonts';
-@import 'mixins';
+@import 'includes/fonts';
+@import 'includes/mixins';
 @import 'includes/flexbox';
 @import 'includes/fontawesome';
-@import 'variables';
+@import 'includes/variables';
 
 // Utility and layout classes
-@import 'utility';
-@import 'layout';
+@import 'includes/utility';
+@import 'includes/layout';
 
 // Sprites
 // @import 'includes/sprites';
 
 // Base styles. This file should be very minimal, containing very basic styles.
-@import 'base';
+@import 'includes/base';
 
 // Modules, self contained pieces of styling that can be reused.
 @import 'modules/wysiwyg';
@@ -37,4 +37,4 @@
 // @import 'modules/drupal-reset';
 
 // Print, inlined to avoid the additional HTTP request: h5bp.com/r
-@import 'print';
+@import 'includes/print';
