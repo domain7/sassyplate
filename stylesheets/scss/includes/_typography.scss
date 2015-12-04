@@ -1,0 +1,34 @@
+@mixin headingtype($type: heading1) {
+
+  $types: (
+    heading1: (
+      font-size: 44px,
+      line-height: 1em,
+      small:(
+        font-size: 34px,
+        line-height: 1.5em
+      ),
+      smaller:(
+        font-size:60px,
+      )
+    )
+  );
+
+  $map: map-get($types, $type);
+  @each $property, $value in $map {
+    @if type-of(map-get($map, #{$property})) != map {
+      #{$property}: $value;
+    }
+  }
+  @each $breakpoint, $width in $breakpoints {
+    $breakpoint-map: map-get($map, $breakpoint);
+    @if type-of($breakpoint-map) == map {
+      @media (max-width: $width){
+        @each $property, $value in $breakpoint-map {
+          #{$property}: $value;
+        }
+      }
+    }
+  }
+  /* Insert common properties here */
+}

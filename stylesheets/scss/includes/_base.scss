@@ -11,9 +11,20 @@ html {
 body {
 	font-family: $font-base;
 	color: $color-base;
+	@media (max-width: breakpoint(small)){
+
+	}
 }
 
-p, ul, ol {
+h1,
+.heading1 {
+	@include headingtype(heading1);
+}
+
+
+p,
+ul,
+ol {
 	&:first-of-type {
 		margin-top: 0; // This is because of normalize. If you Meyer you have it anyway.
 	}

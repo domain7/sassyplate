@@ -68,12 +68,14 @@ $color-state-warning: #334558;
 
 
 // Breakpoints
-$breakpoint-full: 1400px;
-$breakpoint-large: 1200px;
-$breakpoint-mid: 820px;
-$breakpoint-small: 600px;
-$breakpoint-smaller: 420px; // 👽
-$breakpoint-no-mediaqueries: 1020px;
+$breakpoints: (
+	full: 1400px,
+	large: 1200px,
+	mid: 820px,
+	small : 600px,
+	smaller: 420px, // 👽
+	no-mediarqueries: 1020px
+);
 
 //Grid/Susy Guttes
 $gutter-body: 40px;

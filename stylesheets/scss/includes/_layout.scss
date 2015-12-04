@@ -23,6 +23,6 @@ $susy: (
   padding-left: $gutter-body - gutter();
   padding-right: $gutter-body - gutter();
   .no-mediaqueries & {
-    min-width: $breakpoint-no-mediaqueries;
+    min-width: breakpoint(no-mediaqueries);
   }
 }
