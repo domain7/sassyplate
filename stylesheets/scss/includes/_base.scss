@@ -13,11 +13,11 @@ body {
 	color: $color-base;
 }
 
+// Example of the typography mixin for setting the first heading and a heading class
 h1,
 .heading1 {
 	@include headingtype(heading1);
 }
-
 
 p,
 ul,
