@@ -14,17 +14,19 @@
 
 // Fonts, mixins, variables, etc
 @import 'includes/fonts';
+@import 'includes/functions';
 @import 'includes/mixins';
 @import 'includes/flexbox';
 @import 'includes/fontawesome';
 @import 'includes/variables';
+@import 'includes/typography';
 
 // Utility and layout classes
 @import 'includes/utility';
 @import 'includes/layout';
 
 // Sprites
-// @import 'includes/sprites';
+@import 'includes/sprites';
 
 // Base styles. This file should be very minimal, containing very basic styles.
 @import 'includes/base';

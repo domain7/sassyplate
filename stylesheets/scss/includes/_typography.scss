@@ -1,0 +1,44 @@
+// Mixin to reuse common typography styles
+// Insert unique properties in the $types map and insert common properties at the bottom
+// You can copy the headingtype mixin to create a second one for the body type
+
+@mixin headingtype($type: heading1) {
+  $types: (
+    // typename: (
+    //   insert unique properties here for this type
+    //   breakpoint-name: (
+    //     insert properties for this breakpoint
+    //     breakpoint-name must match an entry in the $breakpoint map in variables.scss or it will not compile
+    //   )
+    // ),
+    // Example of a base style for h1
+    heading1: (
+      font-size: 44px,
+      line-height: 1em,
+      small:(
+        font-size: 34px,
+        line-height: 1.5em
+      ),
+      smaller:(
+        font-size:60px,
+      )
+    )
+  );
+  $map: map-get($types, $type);
+  @each $property, $value in $map {
+    @if type-of(map-get($map, #{$property})) != map {
+      #{$property}: $value;
+    }
+  }
+  @each $breakpoint, $width in $breakpoints {
+    $breakpoint-map: map-get($map, $breakpoint);
+    @if type-of($breakpoint-map) == map {
+      @media (max-width: $width){
+        @each $property, $value in $breakpoint-map {
+          #{$property}: $value;
+        }
+      }
+    }
+  }
+  // Insert common properties here
+}
