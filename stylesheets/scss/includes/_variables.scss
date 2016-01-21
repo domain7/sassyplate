@@ -77,7 +77,14 @@ $breakpoints: (
 	no-mediarqueries: 1020px
 );
 
-//Grid/Susy Guttes
+
+// Vertical Spacing Units
+// Used by the _vertical-spacing.scss module
+$space-unit: 15px;
+$space-unit-mid: 8px;
+
+
+//Grid/Susy Gutters
 $gutter-body: 40px;
 $gutter-column: 20px;
 $column-count: 12;
