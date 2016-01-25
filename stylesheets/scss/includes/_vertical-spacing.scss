@@ -1,0 +1,97 @@
+/*
+
+  Vertical Spacing Module
+
+  This module adds space to the top and bottom of an element, as padding or margin
+  Spacing units are defined by the $space-unit variable in _variables.scss
+
+  EXAMPLES:
+
+  Add 1 unit of space as padding to the top and bottom of an element:
+    .l-padding
+    @include v-padding(1)
+
+  Add 4 units of space as margin to the top and bottom of an element:
+    .l-margin-4
+    @include v-margin(4)
+
+  Add 4 units of space as padding to the bottom of an element:
+    .l-padding-bottom-4
+    @include v-padding(4,bottom)
+
+  Add 2 units of space as margin to the top of an element:
+    .l-margin-top-2
+    @include v-margin(4,top)
+
+*/
+
+// Vertical Padding mixin
+@mixin v-padding($i: 1, $v-position: both) {
+  @if $v-position == both {
+    padding-top: $space-unit*$i;
+    padding-bottom: $space-unit*$i;
+  } @else {
+    padding-#{$v-position}: $space-unit*$i;
+  }
+  @media (max-width: map-get($breakpoints, mid)) {
+    @if $v-position == both {
+      padding-top: $space-unit*$i;
+      padding-bottom: $space-unit*$i;
+    } @else {
+      padding-#{$v-position}: $space-unit-mid*$i;
+    }
+  }
+}
+
+
+// Vertical Margin mixin
+@mixin v-margin($i: 1, $v-position: both) {
+  @if $v-position == both {
+    margin-top: $space-unit*$i;
+    margin-bottom: $space-unit*$i;
+  } @else {
+    margin-#{$v-position}: $space-unit*$i;
+  }
+  @media (max-width: map-get($breakpoints, mid)) {
+    @if $v-position == both {
+      margin-top: $space-unit*$i;
+      margin-bottom: $space-unit*$i;
+    } @else {
+      margin-#{$v-position}: $space-unit-mid*$i;
+    }
+  }
+}
+
+
+// Default padding and margin classes - 1 unit of top and bottom spacing by default
+.l-padding {
+  @include v-padding(1);
+}
+.l-margin {
+  @include v-margin(1);
+}
+
+
+// Loop to generate v-padding and v-margin classes
+@for $i from 1 through 6 {
+  // Padding classes
+  .l-padding-#{$i} {
+    @include v-padding($i);
+  }
+  .l-padding-top-#{$i} {
+    @include v-padding($i,top);
+  }
+  .l-padding-bottom-#{$i} {
+    @include v-padding($i,bottom);
+  }
+  // Margin classes
+  .l-margin-#{$i} {
+    @include v-margin($i);
+  }
+  .l-margin-top-#{$i} {
+    @include v-margin($i,top);
+  }
+  .l-margin-bottom-#{$i} {
+    @include v-margin($i,bottom);
+  }
+}
