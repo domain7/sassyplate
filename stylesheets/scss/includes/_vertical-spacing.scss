@@ -38,7 +38,7 @@
       padding-top: $space-unit*$i;
       padding-bottom: $space-unit*$i;
     } @else {
-      padding-#{$v-position}: $space-unit-breakpoint*$i;
+      padding-#{$v-position}: $space-unit-mid*$i;
     }
   }
 }
@@ -57,7 +57,7 @@
       margin-top: $space-unit*$i;
       margin-bottom: $space-unit*$i;
     } @else {
-      margin-#{$v-position}: $space-unit-breakpoint*$i;
+      margin-#{$v-position}: $space-unit-mid*$i;
     }
   }
 }
