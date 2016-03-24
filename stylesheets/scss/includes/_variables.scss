@@ -3,30 +3,30 @@
 
 /*
 
-	THESE ARE JUST DEFAULTS and should be changed to suit the needs of your project.
+  THESE ARE JUST DEFAULTS and should be changed to suit the needs of your project.
 
-	Note:
-		+ Mixin names should describe what things ARE, not what they look like.
-		+ As much as it kills me, colour is spelled the American way to be consistant
-		  with colour declarations in css.
+  Note:
+    + Mixin names should describe what things ARE, not what they look like.
+    + As much as it kills me, colour is spelled the American way to be consistant
+      with colour declarations in css.
 
-	For example, the following are good variable names:
-	$font-base, $font-header, $color-brand, $color-accent, $breakpoint-midsize, $breakpoint-small
+  For example, the following are good variable names:
+  $font-base, $font-header, $color-brand, $color-accent, $breakpoint-midsize, $breakpoint-small
 
-	These are bad variable names:
-	$blue, $orange, $helvetica, $ipad, $iphone
+  These are bad variable names:
+  $blue, $orange, $helvetica, $ipad, $iphone
 
-	On naming conventions, a good convention is to use underscores for spaces, and dashes to indicate
-	a subsidiary relationship. All punctuation is meaningful, and this allows you to easily group
-	variables by type.
+  On naming conventions, a good convention is to use underscores for spaces, and dashes to indicate
+  a subsidiary relationship. All punctuation is meaningful, and this allows you to easily group
+  variables by type.
 
-	The following are good examples of variable groups named with a dash to indicate descendency:
+  The following are good examples of variable groups named with a dash to indicate descendency:
 
-	$font-x
-	$font-weight-x
-	$color-x
-	$icon-x
-	$breakpoint-x
+  $font-x
+  $font-weight-x
+  $color-x
+  $icon-x
+  $breakpoint-x
 
 */
 
@@ -69,12 +69,12 @@ $color-state-warning: #334558;
 
 // Breakpoints
 $breakpoints: (
-	full: 1400px,
-	large: 1200px,
-	mid: 820px,
-	small : 600px,
-	smaller: 420px, // 👽
-	no-mediarqueries: 1020px
+  full: 1400px,
+  large: 1200px,
+  mid: 820px,
+  small : 600px,
+  smaller: 420px, // 👽
+  no-mediarqueries: 1020px
 );
 
 
@@ -91,25 +91,25 @@ $column-count: 12;
 
 // Social icons
 $social_sites: (
-	facebook: $icon-facebook,
-	twitter: $icon-twitter,
-	google_plus: $icon-google-plus,
-	linkedin: $icon-linkedin,
-	pinterest: $icon-pinterest,
-	flickr: $icon-flickr,
-	instagram: $icon-instagram,
-	youtube: $icon-youtube,
-	vimeo: $icon-vimeo-square,
+  facebook: $icon-facebook,
+  twitter: $icon-twitter,
+  google_plus: $icon-google-plus,
+  linkedin: $icon-linkedin,
+  pinterest: $icon-pinterest,
+  flickr: $icon-flickr,
+  instagram: $icon-instagram,
+  youtube: $icon-youtube,
+  vimeo: $icon-vimeo-square,
 );
 
 $social_sites-square: (
-	facebook: $icon-facebook-square,
-	twitter: $icon-twitter-square,
-	google_plus: $icon-google-plus-square,
-	linkedin: $icon-linkedin-square,
-	pinterest: $icon-pinterest-square,
-	flickr: $icon-flickr,
-	instagram: $icon-instagram,
-	youtube: $icon-youtube-square,
-	vimeo: $icon-vimeo-square,
+  facebook: $icon-facebook-square,
+  twitter: $icon-twitter-square,
+  google_plus: $icon-google-plus-square,
+  linkedin: $icon-linkedin-square,
+  pinterest: $icon-pinterest-square,
+  flickr: $icon-flickr,
+  instagram: $icon-instagram,
+  youtube: $icon-youtube-square,
+  vimeo: $icon-vimeo-square,
 );

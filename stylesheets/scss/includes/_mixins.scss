@@ -39,11 +39,11 @@
 } // @mixin clearfix
 
 @mixin hover-focus-underline {
-	text-decoration: none;
-	&:hover,
-	&:focus {
-		text-decoration: underline;
-	} // hover, focus
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  } // hover, focus
 } // @mixin hover_focus_underline
 
 @mixin no-list {

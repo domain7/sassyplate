@@ -4,7 +4,7 @@
 
 
 /*
-	Include Font Awesome font files
+  Include Font Awesome font files
 */
 
 @font-face {
@@ -21,7 +21,7 @@
 
 
 /*
-	Font Awesome variables
+  Font Awesome variables
 */
 
 $icon-adjust: "\f042" !default;
@@ -620,11 +620,11 @@ $icon-youtube-square: "\f166" !default;
 
 
 /*
-	Shame classes (don't tell anyone... for Jamie)
+  Shame classes (don't tell anyone... for Jamie)
 */
 
 .fa {
-	@include icon($family: 'FontAwesome');
+  @include icon($family: 'FontAwesome');
 }
 
 .fa-glass:before { content: $icon-glass; }

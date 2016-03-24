@@ -1,31 +1,31 @@
 html {
-	@include box-sizing(border-box);
+  box-sizing: border-box;
 }
 
 *,
 *:after,
 *:before {
-	@include box-sizing(inherit);
+  box-sizing: inherit;
 }
 
 body {
-	font-family: $font-base;
-	color: $color-base;
+  font-family: $font-base;
+  color: $color-base;
 }
 
 // Example of the typography mixin for setting the first heading and a heading class
 h1,
 .heading1 {
-	@include headingtype(heading1);
+  @include headingtype(heading1);
 }
 
 p,
 ul,
 ol {
-	&:first-of-type {
-		margin-top: 0; // This is because of normalize. If you Meyer you have it anyway.
-	}
-	&:last-of-type {
-		margin-bottom: 0; // This is because of normalize. If you Meyer you have it anyway.
-	}
+  &:first-of-type {
+    margin-top: 0; // This is because of normalize. If you Meyer you have it anyway.
+  }
+  &:last-of-type {
+    margin-bottom: 0; // This is because of normalize. If you Meyer you have it anyway.
+  }
 }
