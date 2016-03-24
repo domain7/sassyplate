@@ -24,21 +24,28 @@
       )
     )
   );
-  $map: map-get($types, $type);
-  @each $property, $value in $map {
-    @if type-of(map-get($map, #{$property})) != map {
-      #{$property}: $value;
+
+  @if(map-has-key($types, $type)) {
+    $map: map-get($types, $type);
+    @each $property, $value in $map {
+      @if type-of(map-get($map, #{$property})) != map {
+        #{$property}: $value;
+      }
     }
-  }
-  @each $breakpoint, $width in $breakpoints {
-    $breakpoint-map: map-get($map, $breakpoint);
-    @if type-of($breakpoint-map) == map {
-      @media (max-width: $width){
-        @each $property, $value in $breakpoint-map {
-          #{$property}: $value;
+    @each $breakpoint, $width in $breakpoints {
+      $breakpoint-map: map-get($map, $breakpoint);
+      @if type-of($breakpoint-map) == map {
+        @media (max-width: $width){
+          @each $property, $value in $breakpoint-map {
+            #{$property}: $value;
+          }
         }
       }
     }
   }
+  @else {
+     @error "Could not find typography style: " + $type;
+  }
+
   // Insert common properties here
 }
