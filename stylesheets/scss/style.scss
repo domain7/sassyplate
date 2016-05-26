@@ -1,16 +1,9 @@
-// Config variables for Compass
-@import 'includes/compass-config';
-
 // Normalize.css makes browsers render all elements more consistently and in
 // line with modern standards. It precisely targets only the styles that need normalizing.
 @import 'includes/normalize';
 
 // Optional reset for Drupal
 // @import 'includes/drupal-reset';
-
-// SASS mixins for CSS3 properties. http://compass-style.org/reference/compass/css3/
-@import 'compass';
-@import 'susy';
 
 // Fonts, mixins, variables, etc
 @import 'includes/fonts';
@@ -27,7 +20,7 @@
 @import 'includes/vertical-spacing';
 
 // Sprites
-@import 'includes/sprites';
+// @import 'includes/sprites';
 
 // Base styles. This file should be very minimal, containing very basic styles.
 @import 'includes/base';
