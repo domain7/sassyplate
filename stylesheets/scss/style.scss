@@ -1,6 +1,7 @@
 // Normalize.css makes browsers render all elements more consistently and in
 // line with modern standards. It precisely targets only the styles that need normalizing.
 @import 'includes/normalize';
+@import "includes/susy/susy";
 
 // Optional reset for Drupal
 // @import 'includes/drupal-reset';
@@ -10,7 +11,7 @@
 @import 'includes/functions';
 @import 'includes/mixins';
 @import 'includes/flexbox';
-@import 'includes/fontawesome';
+// @import 'includes/fontawesome';
 @import 'includes/variables';
 @import 'includes/typography';
 

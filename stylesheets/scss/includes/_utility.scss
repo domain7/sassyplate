@@ -1,23 +1,23 @@
 .u-clearfix {
-	@include clearfix;
+  @include clearfix;
 }
 
 .u-reverse {
-	color: $color-canvas;
-	* {
-		color: inherit;
-	}
-	a:hover,
-	a:focus {
-		color: inherit;
-	} // a:hover
+  color: $color-canvas;
+  * {
+    color: inherit;
+  }
+  a:hover,
+  a:focus {
+    color: inherit;
+  } // a:hover
 }
 
 .u-screen-reader {
-	position: absolute;
-	left: -10000px;
-	top: auto;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
