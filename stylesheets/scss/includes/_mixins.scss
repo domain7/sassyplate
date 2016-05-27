@@ -3,6 +3,14 @@
 
 // -- Mixins for common patterns, utility and compatability -- //
 
+@mixin box-sizing( $type: border-box ) {
+  -webkit-box-sizing: $type;
+     -moz-box-sizing: $type;
+       -o-box-sizing: $type;
+      -ms-box-sizing: $type;
+          box-sizing: $type;
+}
+
 @mixin icon($icon: false, $family: $font-icon) {
   font-family: $family;
   speak: none;
