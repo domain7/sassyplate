@@ -122,3 +122,9 @@
   height: auto;
   overflow: visible;
 }
+
+@mixin ellipsis() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
