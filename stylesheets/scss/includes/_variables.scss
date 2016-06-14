@@ -69,14 +69,15 @@ $color-state-warning: #334558;
 
 // Breakpoints
 $breakpoints: (
-  full: 1400px,
-  large: 1200px,
-  mid: 820px,
-  small : 600px,
-  smaller: 420px, // 👽
-  no-mediaqueries: 1020px
+  no-mediaqueries: 1020px,
+  xxlarge: 1400px,
+  xlarge: 1200px,
+  large: 1100px,
+  medium: 1000px,
+  small : 800px,
+  xsmall: 600px,
+  xxsmall: 400px
 );
-
 
 // Vertical Spacing Units
 // Used by the _vertical-spacing.scss module
