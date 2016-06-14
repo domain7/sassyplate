@@ -7,8 +7,6 @@
 
   Note:
     + Mixin names should describe what things ARE, not what they look like.
-    + As much as it kills me, colour is spelled the American way to be consistant
-      with colour declarations in css.
 
   For example, the following are good variable names:
   $font-base, $font-header, $color-brand, $color-accent, $breakpoint-midsize, $breakpoint-small
@@ -30,11 +28,6 @@
 
 */
 
-
-/* The following variables are needed by some of our mixins and can be adjust to meet
-   the needs of the site.
-*/
-
 // Fonts
 $font-default_stack-serif: "Times New Roman", Times, serif;
 $font-default_stack-sans_serif: "Helvetica Neue", Arial, sans-serif;
@@ -46,7 +39,7 @@ $font-base: proxima-nova, $font-default_stack-sans_serif;
 // Note that these are essential for the font_weight mixin in _mixins.scss
 $font-weight-light: 100;
 $font-weight-medium: 400;
-$font-weight-normal: $font-weight-medium; // Basically an alias, for convenience
+$font-weight-normal: $font-weight-medium;
 $font-weight-bold: 700;
 $font-weight-black: 900;
 
@@ -54,7 +47,6 @@ $font-weight-black: 900;
 $font-size-body: 14;
 
 // Colours
-// These are just defaults. You're going to want to go ahead and change them.
 $color-base: #333; // the colour of most body text
 $color-brand: #e44053; // the main brand colour, probably the main logo colour
 $color-brand-accent: #1d988a; // the brand accent colour might also be used in the logo, or generally as an accent
