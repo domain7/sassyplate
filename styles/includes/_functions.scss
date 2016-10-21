@@ -1,3 +1,7 @@
 @function breakpoint($breakpoint) {
   @return map-get($breakpoints, $breakpoint);
 }
+
+@function image-url($path) {
+  @return url('../assets/images/#{$path}');
+}
