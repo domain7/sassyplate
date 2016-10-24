@@ -3,5 +3,9 @@
 }
 
 @function image-url($path) {
-  @return url('../../images/#{$path}');
+  @return url('#{$path-images}#{$path}');
+}
+
+@function font($path) {
+  @return url('#{$path-fonts}#{$path}');
 }
