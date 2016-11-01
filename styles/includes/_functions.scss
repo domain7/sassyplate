@@ -2,10 +2,10 @@
   @return map-get($breakpoints, $breakpoint);
 }
 
-@function image-url($path) {
-  @return url('#{$path-images}#{$path}');
+@function image-url($path: '../../images') {
+  @return url('#{$path-images}/#{$path}');
 }
 
-@function font($path) {
-  @return url('#{$path-fonts}#{$path}');
+@function font-url($path: '../../fonts') {
+  @return url('#{$path-fonts}/#{$path}');
 }
