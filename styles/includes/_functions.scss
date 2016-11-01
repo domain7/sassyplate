@@ -2,10 +2,20 @@
   @return map-get($breakpoints, $breakpoint);
 }
 
-@function image-url($path: '../../images') {
+
+@function image-url($path) {
+  // ensure there is a base path.
+  // to configure, set $path-images in shared variables file
+  $path-images: '../../images' !default;
+
   @return url('#{$path-images}/#{$path}');
 }
 
-@function font-url($path: '../../fonts') {
+@function font-url($path) {
+  // ensure there is a base path
+  // to configure, set $path-images in shared variables file
+  $path-fonts: '../../images' !default;
+
   @return url('#{$path-fonts}/#{$path}');
 }
+
