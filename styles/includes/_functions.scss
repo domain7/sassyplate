@@ -14,7 +14,7 @@
 @function font-url($path) {
   // ensure there is a base path
   // to configure, set $path-images in shared variables file
-  $path-fonts: '../../images' !default;
+  $path-fonts: '../../fonts' !default;
 
   @return url('#{$path-fonts}/#{$path}');
 }
