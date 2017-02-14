@@ -33,7 +33,7 @@
   } @else {
     padding-#{$v-position}: $space-unit*$i;
   }
-  @media (max-width: $breakpoint(small)) {
+  @media (max-width: breakpoint(small)) {
     @if $v-position == both {
       padding-top: $space-unit-small*$i;
       padding-bottom: $space-unit-small*$i;
@@ -52,7 +52,7 @@
   } @else {
     margin-#{$v-position}: $space-unit*$i;
   }
-  @media (max-width: $breakpoint(small)) {
+  @media (max-width: breakpoint(small)) {
     @if $v-position == both {
       margin-top: $space-unit-small*$i;
       margin-bottom: $space-unit-small*$i;
