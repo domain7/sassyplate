@@ -33,12 +33,12 @@
   } @else {
     padding-#{$v-position}: $space-unit*$i;
   }
-  @media (max-width: map-get($breakpoints, mid)) {
+  @media (max-width: breakpoint(small)) {
     @if $v-position == both {
-      padding-top: $space-unit*$i;
-      padding-bottom: $space-unit*$i;
+      padding-top: $space-unit-small*$i;
+      padding-bottom: $space-unit-small*$i;
     } @else {
-      padding-#{$v-position}: $space-unit-mid*$i;
+      padding-#{$v-position}: $space-unit-small*$i;
     }
   }
 }
@@ -52,12 +52,12 @@
   } @else {
     margin-#{$v-position}: $space-unit*$i;
   }
-  @media (max-width: map-get($breakpoints, mid)) {
+  @media (max-width: breakpoint(small)) {
     @if $v-position == both {
-      margin-top: $space-unit*$i;
-      margin-bottom: $space-unit*$i;
+      margin-top: $space-unit-small*$i;
+      margin-bottom: $space-unit-small*$i;
     } @else {
-      margin-#{$v-position}: $space-unit-mid*$i;
+      margin-#{$v-position}: $space-unit-small*$i;
     }
   }
 }
@@ -69,6 +69,18 @@
 }
 .l-margin {
   @include v-margin(1);
+}
+.l-padding-top {
+  @include v-padding(1,top);
+}
+.l-padding-bottom {
+  @include v-padding(1,bottom);
+}
+.l-margin-top {
+  @include v-margin(1,top);
+}
+.l-margin-bottom {
+  @include v-margin(1,bottom);
 }
 
 
