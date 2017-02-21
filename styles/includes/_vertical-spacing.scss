@@ -70,6 +70,18 @@
 .l-margin {
   @include v-margin(1);
 }
+.l-padding-top {
+  @include v-padding(1,top);
+}
+.l-padding-bottom {
+  @include v-padding(1,bottom);
+}
+.l-margin-top {
+  @include v-margin(1,top);
+}
+.l-margin-bottom {
+  @include v-margin(1,bottom);
+}
 
 
 // Loop to generate v-padding and v-margin classes
