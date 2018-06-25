@@ -35,7 +35,6 @@ $path-fonts: '../../fonts';
 // Fonts
 $font-default_stack-serif: "Times New Roman", Times, serif;
 $font-default_stack-sans_serif: "Helvetica Neue", Arial, sans-serif;
-$font-icon: 'FontAwesome' !default;
 // Create your $font-base like this: 👇 'proxima-nova' is an example
 $font-base: proxima-nova, $font-default_stack-sans_serif;
 
@@ -76,11 +75,5 @@ $breakpoints: (
 
 // Vertical Spacing Units
 // Used by the _vertical-spacing.scss module
-$space-unit: 15px;
-$space-unit-small: 8px;
-
-
-//Grid/Susy Gutters
-$gutter-body: 40px;
-$gutter-column: 20px;
-$column-count: 12;
+$space-unit: 10px;
+$space-unit-small: 5px;
