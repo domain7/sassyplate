@@ -16,16 +16,5 @@ body {
 // Example of the typography mixin for setting the first heading and a heading class
 h1,
 .heading1 {
-  @include headingtype(heading1);
-}
-
-p,
-ul,
-ol {
-  &:first-of-type {
-    margin-top: 0; // This is because of normalize. If you Meyer you have it anyway.
-  }
-  &:last-of-type {
-    margin-bottom: 0; // This is because of normalize. If you Meyer you have it anyway.
-  }
+  @include typography(heading1);
 }

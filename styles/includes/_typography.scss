@@ -2,7 +2,7 @@
 // Insert unique properties in the $types map and insert common properties at the bottom
 // You can copy the headingtype mixin to create a second one for the body type
 
-@mixin headingtype($type: heading1) {
+@mixin typography($type: heading1) {
   $types: (
     // typename: (
     //   insert unique properties here for this type

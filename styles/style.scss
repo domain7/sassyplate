@@ -1,17 +1,11 @@
 // Normalize.css makes browsers render all elements more consistently and in
 // line with modern standards. It precisely targets only the styles that need normalizing.
 @import 'includes/normalize';
-@import "includes/susy/susy";
-
-// Optional reset for Drupal
-// @import 'includes/drupal-reset';
 
 // Fonts, mixins, variables, etc
 @import 'includes/functions';
 @import 'includes/mixins';
 @import 'includes/fonts';
-@import 'includes/flexbox';
-// @import 'includes/fontawesome';
 @import 'includes/variables';
 @import 'includes/typography';
 
@@ -25,10 +19,6 @@
 
 // Modules, self contained pieces of styling that can be reused.
 @import 'modules/wysiwyg';
-
-// Drupal reset. This resets a lot of default Drupal css.
-// NOTE: This file only exists in the drupal branch.
-// @import 'modules/drupal-reset';
 
 // Print, inlined to avoid the additional HTTP request: h5bp.com/r
 @import 'includes/print';
