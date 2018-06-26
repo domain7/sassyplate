@@ -9,8 +9,7 @@
 @import 'includes/variables';
 @import 'includes/typography';
 
-// Utility and layout classes
-@import 'includes/utility';
+// layout classes
 @import 'includes/layout';
 @import 'includes/vertical-spacing';
 
@@ -19,6 +18,9 @@
 
 // Modules, self contained pieces of styling that can be reused.
 @import 'modules/wysiwyg';
+
+// Trumps
+@import 'includes/utility';
 
 // Print, inlined to avoid the additional HTTP request: h5bp.com/r
 @import 'includes/print';
