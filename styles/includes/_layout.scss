@@ -1,4 +1,69 @@
 /*
-  Layout goes in this file. Susy setup should go here too.
 	Layout classes should be prefixed `.l-`
 */
+
+// Grid container and column styles
+.l-container {
+  width: 100%;
+  max-width: $l-container-width + ($l-gutter-body*2);
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: block;
+  padding-left: $l-gutter-body;
+  padding-right: $l-gutter-body;
+  zoom: 1;
+
+  &:after {
+    content:" ";
+    display: block;
+    clear: both;
+  }// &:after
+
+  div[class*='l-col-'] {
+    float: left;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: inherit;
+    min-height: 1px; // in case of empty columns
+
+    &.l-no-gutter {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }// &.l-no-gutter
+
+    @media (min-width: breakpoint(small)) {
+      padding-left: $l-gutter-column;
+      padding-right: $l-gutter-column;
+    }// @media min-width (small)
+
+  }// div[class*='l-col-']
+
+  &--no-gutter {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }// &--no-gutter
+
+}// .l-container
+
+$i: 1;
+
+// Classes for columns .col-1 through .col-12
+@for $i from 1 through $l-column-count {
+  %l-col-#{$i},
+  .l-col-#{$i} {
+    width: 100%;
+    @media (min-width: breakpoint(small)) {
+      width: $l-col-width * $i;
+    }
+  }
+}
+
+// Classes for column offsets .l-col-offest-1 through .l-col-offest-11
+@for $i from 1 through ($l-column-count - 1) {
+  .l-col-offset-#{$i} {
+    margin-left: 0;
+    @media (min-width: breakpoint(small)) {
+      margin-left: $l-col-width * $i;
+    }
+  }
+}

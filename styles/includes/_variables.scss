@@ -28,9 +28,16 @@
 
 */
 
-//Relative to build files
+// Relative to build files
 $path-images: '../../images';
 $path-fonts: '../../fonts';
+
+// Layout specific variables
+$l-gutter-body: 20px;
+$l-gutter-column: 30px;
+$l-column-count: 12;
+$l-container-width: 1320px;
+$l-col-width: 100% / $l-column-count;
 
 // Fonts
 $font-default_stack-serif: "Times New Roman", Times, serif;
@@ -56,11 +63,11 @@ $color-brand-accent: #1d988a; // the brand accent colour might also be used in t
 $color-canvas: #fff; // this is probably the background colour of the body element
 $color-canvas-alt: #ebedec; // an alternate canvas colour. If needed define a $color-base-alt for copy ont this
 $color-keyline: #d7d7d7; // line dividers
+
 // Colours for states
 $color-state-error: #ae0c14;
 $color-state-success: #4c7c47;
 $color-state-warning: #334558;
-
 
 // Breakpoints
 $breakpoints: (
