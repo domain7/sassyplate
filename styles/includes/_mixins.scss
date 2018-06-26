@@ -118,3 +118,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+@mixin fullwidth {
+  left: 50%;
+  margin: 0 -50vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+}

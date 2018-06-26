@@ -1,3 +1,7 @@
+/*
+  Most utility classes will have !important to guarantee that they work when a element has more specific classes overriding
+*/
+
 .u-clearfix {
   @include clearfix;
 }
@@ -11,7 +15,7 @@
   a:focus {
     color: inherit;
   } // a:hover
-}
+}// .u-reverse
 
 .u-screen-reader {
   position: absolute;
@@ -20,4 +24,32 @@
   width: 1px;
   height: 1px;
   overflow: hidden;
-}
+}// .u-screen-reader
+
+.u-text-align-center {
+  text-align: center !important;
+} // .u-text-align-center
+
+.u-color-initial {
+  color: initial !important;
+} // .u-color-initial
+
+.u-no-margin {
+  margin: 0 !important;
+} // .u-no-margin
+
+.u-no-margin-top {
+  margin-top: 0 !important;
+} // .u-no-margin-top
+
+.u-no-margin-bottom {
+  margin-bottom: 0 !important;
+} // .u-no-margin-bottom
+
+.u-float-left {
+  float: left;
+} // .u-float-left
+
+.u-float-right {
+  float: right;
+} // .u-float-right
