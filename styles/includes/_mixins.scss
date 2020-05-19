@@ -1,22 +1,5 @@
 /* Mixins
 /* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
-
-@mixin icon($icon: false, $family: $font-icon) {
-  font-family: $family;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  @if ($icon) {
-    content: $icon;
-  }
-}
-
 @mixin clearfix {
   zoom: 1;  // Triggering "hasLayout" in IE
   &:after {
@@ -43,59 +26,6 @@
   list-style-type: none;
   list-style: none;
 } // @mixin nolist
-
-@mixin responsive-image {
-  max-width: 100%;
-  height: auto;
-  .ie8 & {
-    width: auto;
-  } // ie8
-} // @mixin responsive_image
-
-//rem fallback.  Usage: @include rem(font-size, 1.4);
-@mixin rem($property, $rem) {
-  #{$property}: #{$rem*10}px;
-  #{$property}: #{$rem}rem;
-}
-
-//The old rem fallback
-//NOTE: this can be removed after Sep 9, 2015
-@mixin font-size($size) {
-  @include rem(font-size, $size/10);
-} // @mixin font_size
-
-@mixin inline-block {
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-} // @mixin inline-block
-
-@mixin font-weight($weight) {
-  @if $weight == normal {
-    font-weight: normal;
-    font-weight: $font_weight-normal;
-  } @else if $weight == bold {
-    font-weight: bold;
-    font-weight: $font_weight-bold;
-  } @else if $weight == light {
-    font-weight: lighter;
-    font-weight: $font_weight-light;
-  } @else {
-    font-weight: $weight;
-  }
-} // @mixin font_weight
-
-@mixin full-width {
-  width: 100%;
-  float: none;
-  clear: both;
-}
-
-@mixin small-full {
-  @media (max-width: $breakpoint-small) {
-    @include full-width;
-  } // small
-}
 
 @mixin accessible-hide {
   position:absolute;
