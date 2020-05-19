@@ -8,7 +8,13 @@ html {
   box-sizing: inherit;
 }
 
+:root {
+  font-size: $root-size+em;
+} // :root
+
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-family: $font-base;
   color: $color-base;
 }

@@ -2,7 +2,6 @@
   @return map-get($breakpoints, $breakpoint);
 }
 
-
 @function image-url($path) {
   // ensure there is a base path.
   // to configure, set $path-images in shared variables file
@@ -19,3 +18,28 @@
   @return url('#{$path-fonts}/#{$path}');
 }
 
+@function em($pixels, $context: ($browser-context * $root-size)) {
+
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return #{$pixels/$context}em;
+}
+
+@function rem($pixels, $context: ($browser-context * $root-size)) {
+
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return #{$pixels/$context}rem;
+}
